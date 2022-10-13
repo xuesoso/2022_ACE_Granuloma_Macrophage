@@ -1,0 +1,13 @@
+## Fastq data to upload for manuscript
+A1_WT,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/200113_Trung_Granuloma/191217_J00118_0536_BHFV7VBBXY-L001/outs/fastq_path/SFGF-Pham-TP-13931/A1
+A2_WT,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/200113_Trung_Granuloma/191217_J00118_0536_BHFV7VBBXY-L001/outs/fastq_path/SFGF-Pham-TP-13931/A2
+A3_WT,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/201120_Trung_10X.fastq_p/A3/A3_0_1_HV7YFDRXX
+A4_WT,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/201120_Trung_10X.fastq_p/A4/A4_0_1_HV7YFDRXX
+B1_dSTeE,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/200113_Trung_Granuloma/191217_J00118_0536_BHFV7VBBXY-L001/outs/fastq_path/SFGF-Pham-TP-13931/B1
+B2_dSTeE,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/200113_Trung_Granuloma/191217_J00118_0536_BHFV7VBBXY-L001/outs/fastq_path/SFGF-Pham-TP-13931/B2
+B3_dSTeE,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/201120_Trung_10X.fastq_p/B3/B3_0_1_HV7YFDRXX
+B4_dSTeE,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/201120_Trung_10X.fastq_p/B4/B4_0_1_HV7YFDRXX
+C1_CtrlAb,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/200113_Trung_Granuloma/191217_J00118_0536_BHFV7VBBXY-L003/outs/fastq_path/SFGF-Pham-TP-13932/C1
+C2_CtrlAB,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/200113_Trung_Granuloma/191217_J00118_0536_BHFV7VBBXY-L003/outs/fastq_path/SFGF-Pham-TP-13932/C2
+T1_antiTNF,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/200113_Trung_Granuloma/191217_J00118_0536_BHFV7VBBXY-L003/outs/fastq_path/SFGF-Pham-TP-13932/T1
+T2_antiTNF,/media/QuakeLab_1/sequencing_raw_data/Granuloma_macrophage/Data/200113_Trung_Granuloma/191217_J00118_0536_BHFV7VBBXY-L003/outs/fastq_path/SFGF-Pham-TP-13932/T2
