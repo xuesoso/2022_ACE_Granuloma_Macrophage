@@ -7,5 +7,4 @@ data/processed/201220_Trung/sam_monocyte_velocyto.210505.h5ad
 data/processed/201220_Trung/sam_macrophageSubset_AB.210919.h5ad
 data/processed/201220_Trung/harmony.sam_T_C_treatment.200119.sam_full.210505.h5ad
 data/processed/201220_Trung/ABCT_SAM_momac.220828_review.h5ad
-data/raw/201220_Trung_10X_raw.h5ad
 data/raw/201221_10X_velocyto_all.h5ad
