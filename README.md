@@ -12,7 +12,7 @@ How to retrieve the datasets:
     + GEO repository
 
 
-Explanation for datasets:
+What is in each dataset:
 ------------------------
 
 * sam_full.210505.h5ad - Processed 10X chromium v3.1 scRNA-seq data of splenocyte isolate. Contains samples collected from mouse infected by WT STm and dSTeE STm. Shown in Figure 1A-C. Shown in Figure S2A-B.
