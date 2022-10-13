@@ -2,6 +2,16 @@
 ------------------------
 Repository for scRNA-seq analysis of granuloma macrophage in the course of Salmonella Typhimurium persistent infection.
 
+How to retrieve the datasets:
+------
+* Processed datasets:
+    + [google drive link](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=sharing)
+    + GEO repository
+
+* Raw datasets:
+    + GEO repository
+
+
 Explanation for datasets:
 ------------------------
 
