@@ -1,5 +1,6 @@
 # Data
 data/
+src/upload_data.sh
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
