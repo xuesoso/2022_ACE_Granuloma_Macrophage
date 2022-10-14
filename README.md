@@ -21,9 +21,9 @@ What is in each dataset:
 
 * sam_myeloidSubset.210505.h5ad - Myeloid sub-population derived from "sam_full.210505.h5ad".
 
-* sam_monocyteSubset.210505.h5ad - Monocyte*macrophage sub-population derived from "sam_myeloidSubset.210505.h5ad". Shown in Figure 1D-G, Figure 2A-D, Figure S3A-C.
+* sam_monocyteSubset.210505.h5ad - Monocyte macrophage sub-population derived from "sam_myeloidSubset.210505.h5ad". Shown in Figure 1D-G, Figure 2A-D, Figure S3A-C.
 
-* sam_monocyte_velocyto.210505.h5ad - Monocyte*macrophage sub-population, same set of cells as in "sam_monocyteSubset.210505.h5ad". Dataset is pre-processed with velocyto to yield RNA-velocity prediction. Shown in Figure 2G.
+* sam_monocyte_velocyto.210505.h5ad - Monocyte macrophage sub-population, same set of cells as in "sam_monocyteSubset.210505.h5ad". Dataset is pre-processed with velocyto to yield RNA-velocity prediction. Shown in Figure 2G.
 
 * sam_macrophageSubset_AB.210919.h5ad - Macrophage sub-population derived from "sam_monocyteSubset.210505.h5ad". Shown in Figure 3A-H.
 
