@@ -16,7 +16,7 @@ What is in each dataset:
 ------------------------
 
 | datasets   |  descriptions |
-| :---       |    ---:   |
+| :---       |    :---   |
 | sam_full.210505.h5ad | Processed 10X chromium v3.1 scRNA-seq data of splenocyte isolate. Contains samples collected from mouse infected by WT STm and dSTeE STm. Shown in Figure 1A-C. Shown in Figure S2A-B. |
 | sam_full_velocyto.210505.h5ad | Contains same set of cells in "sam_full.210505.h5ad". Dataset is pre-processed with velocyto to yield RNA-velocity prediction. |
 | sam_myeloidSubset.210505.h5ad | Myeloid sub-population derived from "sam_full.210505.h5ad". |
