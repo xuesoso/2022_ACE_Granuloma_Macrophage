@@ -6,10 +6,10 @@ How to retrieve the datasets:
 ------
 * Processed datasets:
     + [google drive link](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=sharing)
-    + GEO repository
+    + [GEO repository (GSE215880)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215880)
 
 * Raw datasets:
-    + GEO repository
+    + [GEO repository (GSE215880)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215880)
 
 
 What is in each dataset:
