@@ -4,6 +4,7 @@ output/
 
 # scripts
 src/upload_data.sh
+src/alignment/
 
 # Jupyter notebook
 nohup.out
