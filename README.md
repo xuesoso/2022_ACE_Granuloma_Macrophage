@@ -74,7 +74,7 @@ git clone https://github.com/xuesoso/2022_ACE_Granuloma_Macrophage
     - Navigate to the local address of the Jupyter notebook on your favorite browser, the default port passed is set to `8887`:
 
     ```bash
-    firefox http://localhost:8888/notebooks/notebook/analysis_notebook.ipynb
+    firefox http://localhost:8887/notebooks/notebook/analysis_notebook.ipynb
     ```
 
 

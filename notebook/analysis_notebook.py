@@ -68,7 +68,7 @@
 #     Navigate to the local address of the Jupyter notebook on your favorite browser, the default port passed is set to `8887`:
 # 
 #     `
-#     firefox http://localhost:8888/notebooks/notebook/analysis_notebook.ipynb
+#     firefox http://localhost:8887/notebooks/notebook/analysis_notebook.ipynb
 #     `
 #     
 # 
