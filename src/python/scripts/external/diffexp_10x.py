@@ -12,7 +12,7 @@ from scipy.special import gammaln, logsumexp
 import scipy.stats
 from sklearn.utils import sparsefuncs
 import sys
-import tenkit.stats as tk_stats
+from .tenkit import stats as tk_stats
 
 SSEQ_ZETA_QUANTILE = 0.995
 
