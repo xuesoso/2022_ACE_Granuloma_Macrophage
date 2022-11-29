@@ -1,6 +1,12 @@
-# Data
+# Data and output
 data/
+output/
+
+# scripts
 src/upload_data.sh
+
+# Jupyter notebook
+nohup.out
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
