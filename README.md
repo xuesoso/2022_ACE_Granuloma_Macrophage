@@ -1,21 +1,91 @@
 # 2022_ACE_Granuloma_Macrophage
+
+Background
 ------------------------
-Repository for scRNA-seq analysis of granuloma macrophage in the course of Salmonella Typhimurium persistent infection.
+
+**This is a repository for the scRNA-seq analysis generated as part of the manuscript:**
+
+Single-cell profiling identifies ACE+ granuloma macrophages as a non-permissive niche for intracellular bacteria during persistent Salmonella infection (2022). *Trung H. M. Pham†‡, Yuan Xue†, Susan M. Brewer, Kenneth E. Bernstein, Stephen R. Quake‡, Denise Monack‡.* [bioRxiv preprint](https://www.biorxiv.org/content/10.1101/2022.07.21.501041v1.full.pdf+html).
+
+Legends:
+†: co-first authors.
+‡: co-corresponding authors.
+
 
 How to retrieve the datasets:
-------
-* Processed datasets:
-    + [google drive link](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=sharing)
-    + [GEO repository (GSE215880)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215880)
+-------------
+**Processed datasets:**
 
-* Raw datasets:
-    + [GEO repository (GSE215880)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215880)
+- [Google drive deposit](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=sharing)
+
+- [GEO repository (GSE215880)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215880)
+
+**Raw fastq:**
+
+- [GEO repository (GSE215880)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215880)
+
+**Notes:**
+- The easiest way to access the processed data is through the Google drive.
+- Download `data.zip` and unzip the contents to the data directory inside this repository:
+
+    ```
+    cd 2022_ACE_Granuloma_Macrophage/
+    ```
+    ```
+    unzip data.zip -d ./data/
+    ```
+
+Reproducing analysis in this repository
+---------------
+
+1. Clone this repository to your local computer with:
+
+    ```
+    git clone https://github.com/xuesoso/2022_ACE_Granuloma_Macrophage
+    ```
+
+**2. Build the packages required by the code in this notebook**:
+
+    1. You have two options here. The easiest way is to build the Docker image with the Dockerfile provided in this repository and run the Jupyter notebook inside a container.
+
+        - Required: [Install Docker](https://docs.docker.com/get-docker/)
+
+        Once you have Docker installed, navigate to the local directory of this Github repository:
+
+        `
+        cd 2022_ACE_Granuloma_Macrophage/
+        `
+
+        Execute the script to build the image with pre-specified configurations:
+
+        `
+        bash ./Docker/build_docker.sh
+        `
+
+        Execute the script to run this notebook under the Docker container:
+
+        `
+        bash ./Docker/run_docker.sh
+        `
+
+        Navigate to the local address of the Jupyter notebook on your favorite browser, the default port passed is set to `8887`:
+
+        `
+        firefox http://localhost:8888/notebooks/notebook/analysis_notebook.ipynb
+        `
 
 
-What is in each dataset:
+    2. The second approach is to manually install the exact library versions. **This is not recommended as it involves navigating a complicated dependency graph**:
+
+        - Required: Install [Anaconda v4.8.3 with python 3.8](https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.3-Linux-x86_64.sh)
+        - Required: Install the exact version of python packages with `pip` as documented in `requirements.txt`
+        - Note: You may have to install different dependent packages than the latest versions recommended by your platform's package manager.
+            
+
+What is in each annotated data object:
 ------------------------
 
-| datasets   |  descriptions |
+| data objects   |  descriptions |
 | :---       |    :---   |
 | sam_full.210505.h5ad | Processed 10X chromium v3.1 scRNA-seq data of splenocyte isolate. Contains samples collected from mouse infected by WT STm and dSTeE STm. Shown in Figure 1A-C. Shown in Figure S2A-B. |
 | sam_full_velocyto.210505.h5ad | Contains same set of cells in "sam_full.210505.h5ad". Dataset is pre-processed with velocyto to yield RNA-velocity prediction. |
