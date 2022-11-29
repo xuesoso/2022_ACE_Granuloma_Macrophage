@@ -47,46 +47,47 @@ git clone https://github.com/xuesoso/2022_ACE_Granuloma_Macrophage
 
 **2. Build the packages required by the code in this notebook**
 
-You have two options here:
+- You have two options here:
 
-- The easiest way is to build the Docker image with the Dockerfile provided in this repository and run the Jupyter notebook inside a container.
+    I. The easiest way is to build the Docker image with the Dockerfile provided in this repository and run the Jupyter notebook inside a container.
 
     - **Required: [Install Docker](https://docs.docker.com/get-docker/)**
 
-    i. Once you have Docker installed, navigate to the local directory of this Github repository:
+    - Once you have Docker installed, navigate to the local directory of this Github repository:
 
     ```bash
     cd 2022_ACE_Granuloma_Macrophage/
     ```
 
-    ii. Execute the script to build the image with pre-specified configurations:
+    - Execute the script to build the image with pre-specified configurations:
 
     ```bash
     bash ./Docker/build_docker.sh
     ```
 
-    iii. Execute the script to run this notebook under the Docker container:
+    - Execute the script to run this notebook under the Docker container:
 
     ```bash
     bash ./Docker/run_docker.sh
     ```
 
-    iv. Navigate to the local address of the Jupyter notebook on your favorite browser, the default port passed is set to `8887`:
+    - Navigate to the local address of the Jupyter notebook on your favorite browser, the default port passed is set to `8887`:
 
     ```bash
     firefox http://localhost:8888/notebooks/notebook/analysis_notebook.ipynb
     ```
 
 
-2. The second approach is to manually install the exact library versions. **This is not recommended as it involves navigating a complicated dependency graph**:
+    II. The second approach is to manually install the exact library versions. **This is not recommended as it involves navigating a complicated dependency graph**:
 
-    i. Install [Anaconda v4.8.3 with python 3.8](https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.3-Linux-x86_64.sh) on Linux system (tested on Ubuntu 18.04/Fedora 36).
+    - Install [Anaconda v4.8.3 with python 3.8](https://repo.anaconda.com/miniconda/Miniconda3-py38_4.8.3-Linux-x86_64.sh) on Linux system (tested on Ubuntu 18.04/Fedora 36).
 
-    ii. Execute in shell: `conda install -c conda-forge install python=3.7.0`
+    - Execute in shell: `conda install -c conda-forge install python=3.7.0`
 
-    iii. Install the exact version of python packages with `pip` as documented in `requirements.txt`
+    - Install the exact version of python packages with `pip` as documented in `requirements.txt`
 
-    *Note: You may have to install different dependent packages than the latest versions recommended by your platform's package manager.*
+    - *Note: You may have to install different dependent packages than the latest versions recommended by your platform's package manager.*
+
            
 ## Additioal notes
 -------
