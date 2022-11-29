@@ -6,7 +6,8 @@
 # License: MIT
 
 #### Import libraries ####
-import os, sys, sklearn, warnings, getpass, copy, json, string, anndata, gzip, itertools
+import os, sys, sklearn, warnings, getpass, copy, json, string, anndata
+import gzip, itertools, numba
 from pathlib import Path
 __homepath__ = str(Path.home())
 warnings.filterwarnings('ignore')
@@ -19,7 +20,6 @@ import scipy as sp
 from scipy.cluster import hierarchy
 import scipy.io
 from samalg import SAM
-from nheatmap import nhm
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap, to_hex
