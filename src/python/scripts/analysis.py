@@ -420,7 +420,7 @@ def panglaoDB_score(adh, groupby='leiden', processed_panglao=None,
     df_lineage.columns = df_lineage.columns.values.astype(str)
     adh.uns[added_key] = df_lineage
 
-#### Differential expression functions
+#### Differential expression functions ####
 
 def multiple_test_correction(sorted_pvals):
     """
@@ -429,7 +429,7 @@ def multiple_test_correction(sorted_pvals):
 
     Parameters
     ----------
-    sorted_pvals : list
+    sorted_pvals : np.array
                    Sorted by ascending order p-values.
 
     Returns
@@ -572,9 +572,10 @@ def export_marker(ad, directory, groupby='leiden'):
 
 def cmh_test(df, K, verbose=False):
     """
-    Performs and retrieves Cochran-Mantel-Haenszel test statistic
-    input Table should be arranged in pairs.
-    for instance, we have a table
+    Performs and retrieves Cochran-Mantel-Haenszel test statistic. We first
+    construct contingency tables of cell counts for each cell state/type.
+
+    For instance, we have a table
 
         A1 A2 A3 A4 B1 B2 B3 B4
     X   .. .. .. .. .. .. .. ..
