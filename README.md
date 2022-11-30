@@ -91,6 +91,11 @@ git clone https://github.com/xuesoso/2022_ACE_Granuloma_Macrophage
            
 ## Additioal notes
 -------
+
+**Supported operating system platforms:**
+- MacOS (tested on Monterey v 12.5.1)
+- Linux (tested on Fedora 36)
+
 <details>
 <summary>What is in each annotated data object</summary>
 
