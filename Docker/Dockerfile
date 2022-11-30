@@ -1,6 +1,4 @@
 FROM mambaorg/micromamba:0.8.2
-ARG USER_ID
-ARG GROUP_ID
 
 #### Install packages with micromamba (much faster than anaconda) ####
 RUN micromamba install -c plotly -c conda-forge \ 
@@ -34,7 +32,9 @@ RUN mkdir /jupyter && chmod ugo+rwx /jupyter
 WORKDIR /jupyter/
 
 #### Create a user with the same UID as the host user ####
-RUN addgroup --gid $GROUP_ID user
+ARG USER_ID
+ARG GROUP_ID
+
 RUN adduser --disabled-password --gecos '' --uid $USER_ID --gid $GROUP_ID user
 USER user
 
