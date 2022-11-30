@@ -292,7 +292,7 @@ D.plot(kind='bar', stacked=True, rot=0, ax=ax)
 ax.legend(frameon=True);
 ax.set_ylabel('cell counts');
 ax.set_ylabel('leiden');
-ax.set_title('Phase frequency by MoMac clusters');
+ax.set_title('Phase frequency by MNP clusters');
 ax.grid(False)
 sfig(fig, fdm+'s3B.bar_mnp_phase_frequency')
 
