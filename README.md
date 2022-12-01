@@ -4,7 +4,7 @@
 
 **This is a repository for the scRNA-seq analysis generated as part of the manuscript:**
 
-Single-cell profiling identifies ACE+ granuloma macrophages as a non-permissive niche for intracellular bacteria during persistent Salmonella infection (2022). *Trung H. M. Pham†‡, Yuan Xue†, Susan M. Brewer, Kenneth E. Bernstein, Stephen R. Quake‡, Denise Monack‡.* [bioRxiv preprint](https://www.biorxiv.org/content/10.1101/2022.07.21.501041v1.full.pdf+html).
+Single-cell profiling identifies ACE+ granuloma macrophages as a non-permissive niche for intracellular bacteria during persistent Salmonella infection (2022). *Trung H. M. Pham†‡, Yuan Xue†, Susan M. Brewer, Kenneth E. Bernstein, Stephen R. Quake‡, Denise Monack‡.*
 
 Legends:
 †: co-first authors.
