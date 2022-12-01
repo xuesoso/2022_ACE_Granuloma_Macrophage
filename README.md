@@ -17,6 +17,8 @@ Legends:
 
 - [Google drive deposit](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=sharing)
 
+- [Dryad deposit](https://datadryad.org/stash/dataset/10.5061/dryad.ksn02v77w)
+
 - [GEO repository (GSE215880)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215880)
 
 **Raw fastq:**
@@ -24,8 +26,8 @@ Legends:
 - [GEO repository (GSE215880)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE215880)
 
 **Notes:**
-- The easiest way to access the processed data is through the [Google drive](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=sharing)
-.
+- The easiest way to access the processed data is through the [Google drive](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=sharing) or [Dryad deposit](https://datadryad.org/stash/dataset/10.5061/dryad.ksn02v77w).
+
 - Download `data.zip` and unzip the contents to the data directory inside this repository:
 
     ```bash

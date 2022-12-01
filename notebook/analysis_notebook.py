@@ -30,7 +30,7 @@
 # 2. In `README.md`, you will find instructions on how to access the raw and processed data, and analysis code used in this notebook.
 # 
 # 
-# 3. To follow the notebook, the fastest way to access the processed data is through the [shared Google Drive here](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=share_link). Download `data.zip` and unzip the contents to the data directory inside this repository:
+# 3. To follow the notebook, the fastest way to access the processed data is through the [shared Google Drive](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=share_link) or [Dryad deposit](https://datadryad.org/stash/dataset/10.5061/dryad.ksn02v77w). Download `data.zip` and unzip the contents to the data directory inside this repository:
 #     
 #     `
 #     cd 2022_ACE_Granuloma_Macrophage/
