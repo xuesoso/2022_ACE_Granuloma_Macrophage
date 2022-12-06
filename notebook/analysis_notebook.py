@@ -675,8 +675,8 @@ gsoa['Ace+.4']['HallmarkDown'].head()
 
 # GSEA was also computed for some of the datasets following default parameter settings.
 
-# All differential gene expression, GO term, GSEA, and other analyses are accessible on [the Google Drive folder](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=share_link) at: 
-# **google_drive_public/marker/**
+# All differential gene expression, GO term, GSEA, and other analyses are accessible on [Dryad deposit](https://datadryad.org/stash/dataset/10.5061/dryad.ksn02v77w) at: 
+# **data/marker/**
 
 # ### Figure 3E: Dotplot of marker genes in MoMac sub-population
 
