@@ -30,7 +30,7 @@
 # 2. In `README.md`, you will find instructions on how to access the raw and processed data, and analysis code used in this notebook.
 # 
 # 
-# 3. To follow the notebook, the fastest way to access the processed data is through the [shared Google Drive](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=share_link) or [Dryad deposit](https://datadryad.org/stash/dataset/10.5061/dryad.ksn02v77w). Download `data.zip` and unzip the contents to the data directory inside this repository:
+# 3. To follow the notebook, the fastest way to access the processed data is through the [shared Google Drive](https://drive.google.com/drive/folders/1ohx-A5gmWS42yG77ee6h7KLyaY4CINQV?usp=share_link) or [Dryad deposit](https://datadryad.org/stash/dataset/doi:10.5061%2Fdryad.ksn02v77w). Download `data.zip` and unzip the contents to the data directory inside this repository:
 #     
 #     `
 #     cd 2022_ACE_Granuloma_Macrophage/
@@ -227,7 +227,7 @@ groups_order = adh.uns["dendrogram_['label']"]['categories_ordered']
 g = np.concatenate([nbmarker_full[x].index.values[:5] for x in groups_order])
 
 
-# In[8]:
+# In[ ]:
 
 
 dp = sc.pl.dotplot(adh, g, groupby='label', dendrogram=True, show=False,
@@ -249,14 +249,14 @@ sfig(ax.figure, fdm+'1C.dotplot_full_label_top_marker')
 
 # ### Figure 1D: UMAP of MNP sub-populations showing leiden clustering
 
-# In[9]:
+# In[ ]:
 
 
 fn = infd+'sam_monocyteSubset.210505.h5ad'
 ad = sc.read_h5ad(fn)
 
 
-# In[10]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(figsize=(4, 4))
@@ -269,7 +269,7 @@ sfig(fig, fdm+'1D.umap_mnp_leiden')
 
 # leiden clusters 4, 8, 9, and 10 are likely proliferative progenitors of MNP.
 
-# In[11]:
+# In[ ]:
 
 
 X = ad.obsm['X_umap']
@@ -282,7 +282,7 @@ sc.pl.umap(ad, color='phase', ax=ax, legend_loc='on data',
 sfig(fig, fdm+'s3A.umap_mnp_phase')
 
 
-# In[12]:
+# In[ ]:
 
 
 D = ad.obs.groupby(['leiden', 'phase']).size().unstack()
@@ -299,7 +299,7 @@ sfig(fig, fdm+'s3B.bar_mnp_phase_frequency')
 
 # ### Figure 1E: Dotplot of monocyte, macrophage, and GMP marker genes
 
-# In[13]:
+# In[ ]:
 
 
 gs = ['Ptprc', 'Itgam', 'Itgax', 'Ly6c2', 'Fcgr1', 'Csf1r', 'Adgre1', 'Cd68',
@@ -329,7 +329,7 @@ sfig(fig, fdm+'1E.dotplot_mnp_macrophage_marker')
 
 # ### Figure 1F: UMAP of MNP sub-population showing marker genes
 
-# In[14]:
+# In[ ]:
 
 
 gs = ['Itgam', 'Itgax', 'Ly6c2', 'Fcgr1']
@@ -346,7 +346,7 @@ sfig(gfg.figure, fdm+'1F.umap_mnp_macrophage_marker')
 
 # ### Figure 1G: CMH test on MNP cell states
 
-# In[15]:
+# In[ ]:
 
 
 #### We order the leiden clusters based on their cell type identities.
@@ -404,7 +404,7 @@ sfig(fig, fdm+'1G.bar_mnp_relative_abundance.vertical')
 
 # Load the marker genes based on negative binomial differential test of all clusters found in the MNP sub-population.
 
-# In[16]:
+# In[ ]:
 
 
 l2thres, pthres, min_expressed = 1, 0.05, 0.25
@@ -425,7 +425,7 @@ for x in groups_order:
         'log2-fold', ascending=False).index.values[:5])
 
 
-# In[17]:
+# In[ ]:
 
 
 dp = sc.pl.dotplot(ad, g, groupby='leiden', dendrogram=True, show=False, swap_axes=True,
@@ -446,7 +446,7 @@ sfig(ax.figure, fdm+'2A.dotplot_mnp_label_top_marker')
 
 # ### Figure 2B: Macrophage-related functional module activity
 
-# In[18]:
+# In[ ]:
 
 
 outDir = infd+'../marker/Macrophage_monocyte.Ccl4/GO/MSigDB/'
@@ -456,7 +456,7 @@ for key in ['Ccl4+', 'Ccl4-', 'Spic+']:
     hmres[key] = pd.read_csv(outDir+'{:}_HallmarkUp.tsv.gz'.format(key), sep='\t', index_col=0)
 
 
-# In[19]:
+# In[ ]:
 
 
 #### Complement gene sets
@@ -491,7 +491,7 @@ sfig(gfg.figure, fdm+'2B.umap_mnp_complement_score')
 
 # ### Figure 2C: Dotplot of red-pulp macrophages (RPMs) marker genes
 
-# In[20]:
+# In[ ]:
 
 
 ad.obs['label'] = ['MoMac '+x for x in ad.obs['leiden'].values]
@@ -510,7 +510,7 @@ sfig(fig, fdm+'2C.dotplot_mnp_RPM_marker.leiden')
 
 # ### Figure 2D: UMAP of MNP sub-population showing RPM marker gene score
 
-# In[21]:
+# In[ ]:
 
 
 panglao_marker = analysis.load_panglaoDB(ad)
@@ -523,7 +523,7 @@ sfig(gfg.figure, fdm+'2D.umap_mnp_RPM_score_averaged.monocyte.pdf')
 
 # ### Figure 2G: RNA velocity stream plot
 
-# In[22]:
+# In[ ]:
 
 
 admv = sc.read_h5ad(infd+'sam_monocyte_velocyto.210505.h5ad')
@@ -544,13 +544,13 @@ axs.figure.savefig(fdm+'2G.mnp_rna_velocity_stream_latent_time.png',
 
 # ### Figure 3A: UMAP in MoMac showing leiden clusters
 
-# In[23]:
+# In[ ]:
 
 
 ad = sc.read_h5ad(infd+'sam_macrophageSubset_AB.210919.h5ad')
 
 
-# In[24]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(figsize=(4, 4))
@@ -561,7 +561,7 @@ sfig(fig, fdm+'3A.umap_momac_leiden')
 
 # ### Figure 3B: Dotplot of marker genes in MoMac sub-population
 
-# In[25]:
+# In[ ]:
 
 
 gs = ['Ptprc', 'Itgam', 'Itgax', 'Ly6c2', 'Fcgr1', 'Csf1r', 'Adgre1', 'Cd68',
@@ -588,7 +588,7 @@ sfig(fig, fdm+'3B.dotplot_momac_marker.momacsub_AB')
 
 # ### Figure 3C: UMAP of MoMac showing cell type annotations
 
-# In[26]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(figsize=(4, 4))
@@ -607,7 +607,7 @@ sfig(fig, fdm+'3C.umap_momac_cell_type')
 
 # #### Differential gene marker gene discovery
 
-# In[27]:
+# In[ ]:
 
 
 #### Marker genes analysis for MoMac sub-population
@@ -620,7 +620,7 @@ analysis.export_marker(ad, outDir, groupby='cell_type')
 # - specific marker results
 # - negative binomial results
 
-# In[28]:
+# In[ ]:
 
 
 specific_res = {x.split('/')[-1].split('_')[1]:pd.read_csv(x, index_col=0, sep='\t')
@@ -629,13 +629,13 @@ nb_res = {x.split('/')[-1].split('_')[0]:pd.read_csv(x, index_col=0, sep='\t')
           for x in glob(outDir+'negative_binomial/*.tsv.gz')}
 
 
-# In[29]:
+# In[ ]:
 
 
 specific_res['Ace+.4'].head()
 
 
-# In[30]:
+# In[ ]:
 
 
 nb_res['Ace+.4'].head()
@@ -645,7 +645,7 @@ nb_res['Ace+.4'].head()
 
 # `analysis.run_GSOA` provides a wrapper function to compute the GSOA analysis. This requires an input list of paths containing the negative binomial test results, the output directory, and a list of the cluster labels (have to match the input file paths).
 
-# In[31]:
+# In[ ]:
 
 
 fns = glob(infd+'../marker/momacsub_AB.cell_type/negative_binomial/*.tsv.gz')
@@ -655,19 +655,19 @@ groups = np.unique(ad.obs['cell_type'])
 gsoa = analysis.run_GSOA(fns, outDir, groups)
 
 
-# In[32]:
+# In[ ]:
 
 
 gsoa['Ace+.4'].keys()
 
 
-# In[33]:
+# In[ ]:
 
 
 gsoa['Ace+.4']['HallmarkUp'].head()
 
 
-# In[34]:
+# In[ ]:
 
 
 gsoa['Ace+.4']['HallmarkDown'].head()
@@ -682,7 +682,7 @@ gsoa['Ace+.4']['HallmarkDown'].head()
 
 # Load the marker genes based on negative binomial differential test of all clusters found in MoMac sub-population.
 
-# In[35]:
+# In[ ]:
 
 
 l2thres, pthres, min_expressed = 1, 0.05, 0.1
@@ -694,7 +694,7 @@ for fn in fns:
     marker[cl] = df[(df['log2-fold']>l2thres)*(df['adjusted-p']<pthres)*(df['expressed_a']>min_expressed)]
 
 
-# In[36]:
+# In[ ]:
 
 
 lbmap = dict(zip(ad.obs['sub_leiden'], ad.obs['cell_type']))
@@ -743,7 +743,7 @@ sfig(fig, fdm+'3E.dotplot_momac_marker_AB')
 
 # ### Figure 3F: CMH test on MoMac cell states
 
-# In[37]:
+# In[ ]:
 
 
 _cta_ = 'cell_type'
@@ -780,7 +780,7 @@ res, ratio_difference = analysis.cmh_test(df_abundance.iloc[:, ::-1], K=4)
 pthreshold = 0.05
 
 
-# In[38]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(figsize=(2, 4))
@@ -800,7 +800,7 @@ sfig(fig, fdm+'3F.bar_momac_AB_relative_abundance.vertical')
 
 # ### Figure 3G: Volcano plot of differential genes in selected MoMac cell types from WT and $\Delta$*STeE* infected mice
 
-# In[39]:
+# In[ ]:
 
 
 outDir = infd+'../marker/selected_momac_AB.AvsB/negative_binomial/'
@@ -813,7 +813,7 @@ dfscore['score'] = -np.log10(dfscore['adjusted-p']) * dfscore['log2-fold']
 anng = ['Ace', 'Nos2', 'S1pr5', 'Eno3', 'Id3', 'Havcr2', 'Cd300ld', 'Serpinb2', 'Marco', 'Trem2', 'Saa3', 'Prtn3', 'Gpnmb', 'Ccl8', 'Apoe', 'Stab1', 'Vcam1', 'Egr1', 'Cxcl9']
 
 
-# In[40]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(figsize=(3, 3))
@@ -826,7 +826,7 @@ sfig(fig, fdm+'3G.volcano_selected_momac.A_vs_B');
 
 # ### Figure 3H: GSEA results comparing selected MoMac cell types from WT and $\Delta$*STeE* infected mice
 
-# In[41]:
+# In[ ]:
 
 
 threshold = 3
@@ -847,7 +847,7 @@ Dplot = Dplot.sort_values('WT')[::-1]
 Dplot.index = [' '.join(x.split('_')[1:]) for x in Dplot.index]
 
 
-# In[42]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(figsize=(2.5, 4))
@@ -868,7 +868,7 @@ sfig(fig, fdm+'3H.barh_GSOA_AB.selected_momac_AB.KEGG.A_vs_B')
 
 # ## Load the integrated monocyte-macrophage (MoMac) sub-population datasets from WT, $\Delta$*STeE*, WT + control IgG antibody, and WT + anti-TNF$\alpha$ mice.
 
-# In[43]:
+# In[ ]:
 
 
 wfn = infd+'ABCT_SAM_momac.220828_review.h5ad'
@@ -877,7 +877,7 @@ ad = sc.read_h5ad(wfn)
 
 # ### Figure 6A: Violin plot of interleukin expression in Ace$^+$ and Nos2$^+$ macrophages.
 
-# In[44]:
+# In[ ]:
 
 
 gs = ['Il1b', 'Il18bp', 'Il23a', 'Il1f9', 'Il18rap', 'Il10ra', 'Il16', 'Il17ra',
@@ -900,7 +900,7 @@ sfig(fig, fdm+'6A.stacked_violinplot.AB.Ace_vs_Nos2.IL')
 
 # ### Figure 6B: UMAP of integrated MoMac showing cell type annotations
 
-# In[45]:
+# In[ ]:
 
 
 fig, ax = plt.subplots(figsize=(3, 3))
@@ -913,7 +913,7 @@ sfig(fig, fdm+'6B.umap_momacsub_celltype_ABCT.SAM.fixed')
 
 # ### Figure 6C: UMAP of integrated datasets showing expression of macrophage markers
 
-# In[46]:
+# In[ ]:
 
 
 sub = ad.copy()
@@ -928,7 +928,7 @@ sfig(gfg.figure, fdm+'6C.umap_momacsub_ABCT_marker_genes.SAM')
 
 # WT (A), $\Delta$*STeE* (B) infected mice
 
-# In[47]:
+# In[ ]:
 
 
 admac = ad[ad.obs['treatment'].isin(['A', 'B'])]
@@ -982,7 +982,7 @@ sfig(fig, fdm+'6D.bar_momac_ABCT_subset_AB_relative_abundance.vertical.fixed')
 
 # WT infected + IgG control antibody treated (C), WT infected + Tnf-$\alpha$ antibody treated mice (T)
 
-# In[48]:
+# In[ ]:
 
 
 admac = ad[ad.obs['treatment'].isin(['C', 'T'])]
