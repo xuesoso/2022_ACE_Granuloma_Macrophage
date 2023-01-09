@@ -6,7 +6,7 @@
 # ## Background
 
 # This is a jupyter notebook for the manuscript: \
-# **Single-cell profiling identifies ACE+ granuloma macrophages as a non-permissive niche for intracellular bacteria during persistent Salmonella infection (2022). Trung H. M. Pham†‡, Yuan Xue†, Susan M. Brewer, Kenneth E. Bernstein, Stephen R. Quake‡, Denise Monack‡. [Science Advances](https://www.science.org/doi/full/10.1126/sciadv.add4333).**
+# **Single-cell profiling identifies ACE+ granuloma macrophages as a non-permissive niche for intracellular bacteria during persistent Salmonella infection. Trung H. M. Pham†‡, Yuan Xue†, Susan M. Brewer, Kenneth E. Bernstein, Stephen R. Quake‡, Denise Monack‡. [Science Advances (2023)](https://www.science.org/doi/full/10.1126/sciadv.add4333).**
 # 
 # Legends:
 # †: co-first authors.
